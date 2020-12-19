@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+#### 一级路由，二级路由，如何设置？
+- 一级路由：大的分类：
+- 2级路由：cdms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+### 工具
+1. postman
 
-### `yarn start`
+2. 编译工具
+npm 工具 ： 
+- chalk 这个包是为了使输出不再单调,添加文字背景什么的,改变字体颜色什么的, npm install chalk
+- prompts ,Npm的question && answer工具
+- BannerPlugin,编译后的文件信息
+- HtmlWebpackPlugin:Generates an `index.html` file with the <script> injected.
+- DefinePlugin,在node环境中定义变量，在生产环境中使用
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+new webpack.BannerPlugin({
+    banner: `${process.env.NODE_ENV} BUILD by ${os.userInfo().username}: ${new Date()}`,
+    entryOnly: true
+}),
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+extract-text-webpack-plugin  --- 独立出css文件
+optimize-css-assets-webpack-plugin  对css进行优化（主要是压缩)
 
-### `yarn test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 目录结构
+--config                编译配置
+--scripts               编译脚本 
+--public                静态文件，样式等
+--src                   源代码 
+--src\api               接口
+--src\Components        组件
+--src\Common            通用文件夹
+--src\Pages             一级路由直达的页面
+--src\router            路由管理
+--src\Store             Store
