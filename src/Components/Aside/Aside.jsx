@@ -1,7 +1,4 @@
-import { Fragment } from "react";
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import logo from "../../Common/logo.png";
 
 export default class Header extends Component {
@@ -10,7 +7,7 @@ export default class Header extends Component {
       <React.Fragment>
         <div id="left">
           <div>
-            <img style={{ width: "100px" }} src={logo} /><br></br>
+            <img alt="hahaha" style={{ width: "100px" }} src={logo} /><br></br>
             <a href="/home">home</a> <br></br>
             <a href="/about">about</a> <br></br>
             <a href="/mine">mine</a><br></br>
