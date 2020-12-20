@@ -2,18 +2,20 @@
 
 ## 如何使用模板，而不是直接把html写在组件中
 
-Route的render,exact,render分别是啥
-为什么我的Router需要刷新？
+### 为什么我的Router需要刷新？
 
 ### package.json 的proxy字段，干嘛的？
 
+react路由和后端Nginx或者Node,有什么关系？
+HashRouter,BrowserRouter 分别有什么影响
 
 
-### 请求数据：dispatch action，通过axios去请求数据，通过Mock,获取数据，再render
 
 
 
-### 教程：https://www.bilibili.com/video/BV1CJ411u7at?p=19
+### 教程：https://www.bilibili.com/video/BV1Hg4y167v6?p=3  react 后台+antd
+
+### 教程：https://www.bilibili.com/video/BV1CJ411u7at?p=19  react 后台
 
 
 #done done done done done done done done done done done done done done done done 
@@ -73,3 +75,5 @@ let getHomeDataAction = () => {
         })
     }
 }
+
+### 请求数据：dispatch action，通过axios去请求数据，通过Mock,获取数据，再render
