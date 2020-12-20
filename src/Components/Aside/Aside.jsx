@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../../Common/logo.png";
+import { BrowserRouter as Router, Link} from "react-router-dom";
 
 export default class Header extends Component {
   render() {
@@ -16,11 +17,11 @@ export default class Header extends Component {
             <a href="/course/add">course-add</a><br></br>
             <a href="/course/list">course-list</a><br></br>
 
-            {/* <Router>
+            <Router>
               <Link to="/home">home</Link>
               <br></br>
               <Link to="/about">about</Link>
-            </Router> */}
+            </Router>
           </div>
         </div>
       </React.Fragment>
